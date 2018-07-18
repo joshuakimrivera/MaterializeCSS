@@ -14,28 +14,100 @@
     <body>
       <div class = "container">
         <!-- Colors Container -->
-        <h1>Colors</h1>
-        <div class="blue darken-2 white-text">Materialize Blue</div>
-        <div class="purple darken-4 white-text">Materialize Purple</div>
-        <div class="blue-grey darken-4 white-text">Blue-Gray</div>
+          <h1>Colors</h1>
+          <div class="row">
+            <h7>Blue</h7>
+            <div class="col s12"></div>
+            <div class="col s1 blue lighten-5">&nbsp</div>
+            <div class="col s1 blue lighten-4">&nbsp</div>
+            <div class="col s1 blue lighten-3">&nbsp</div>
+            <div class="col s1 blue lighten-2">&nbsp</div>
+            <div class="col s1 blue lighten-1">&nbsp</div>
+            <div class="col s1 blue">&nbsp</div>
+            <div class="col s1 blue darken-1">&nbsp</div>
+            <div class="col s1 blue darken-2">&nbsp</div>
+            <div class="col s1 blue darken-3">&nbsp</div>
+            <div class="col s1 blue darken-4">&nbsp</div>
+            <div class="col s1 blue darken-5">&nbsp</div>
+            <div class="col s1 blue accent-1">&nbsp</div>
+          </div>
+          <div class="row">
+            <h7>Purple</h7>
+            <div class="col s12"></div>
+            <div class="col s1 purple lighten-5">&nbsp</div>
+            <div class="col s1 purple lighten-4">&nbsp</div>
+            <div class="col s1 purple lighten-3">&nbsp</div>
+            <div class="col s1 purple lighten-2">&nbsp</div>
+            <div class="col s1 purple lighten-1">&nbsp</div>
+            <div class="col s1 purple">&nbsp</div>
+            <div class="col s1 purple darken-1">&nbsp</div>
+            <div class="col s1 purple darken-2">&nbsp</div>
+            <div class="col s1 purple darken-3">&nbsp</div>
+            <div class="col s1 purple darken-4">&nbsp</div>
+            <div class="col s1 purple darken-5">&nbsp</div>
+            <div class="col s1 purple accent-1">&nbsp</div>
+          </div>
+          <div class="row">
+            <h7>Blue-grey</h7>
+            <div class="col s12"></div>
+            <div class="col s1 blue-grey lighten-5">&nbsp</div>
+            <div class="col s1 blue-grey lighten-4">&nbsp</div>
+            <div class="col s1 blue-grey lighten-3">&nbsp</div>
+            <div class="col s1 blue-grey lighten-2">&nbsp</div>
+            <div class="col s1 blue-grey lighten-1">&nbsp</div>
+            <div class="col s1 blue-grey">&nbsp</div>
+            <div class="col s1 blue-grey darken-1">&nbsp</div>
+            <div class="col s1 blue-grey darken-2">&nbsp</div>
+            <div class="col s1 blue-grey darken-3">&nbsp</div>
+            <div class="col s1 blue-grey darken-4">&nbsp</div>
+            <div class="col s1 grey darken-4">&nbsp</div>
+            <div class="col s1 grey darken-5">&nbsp</div>
+          </div>
+
+        <br><br>
+
 
         <!-- Buttons Container -->
         <h1>Buttons</h1>
-        <button class="btn blue-grey lighten-4 black-text">Plain</button>
-        <button class="btn blue-grey lighten-4 disabled">disabled</button>
-        <button class="btn blue-grey lighten-3 black-text waves-effect">Wave Effect</button>
-        <button class="btn blue-grey lighten-2 black-text waves-effect waves-light">Wave Effect Light</button>
-        <button class="btn btn-large blue-grey black-text lighten-1 waves-effect waves-light">Wave Effect Light Large</button>
-        <button class="btn blue-grey black-text waves-effect waves-light"><i class="material-icons white-text">cloud</i></button>
-        <button class="btn btn-large blue-grey darken-3 black-text waves-effect waves-light"><i class="material-icons white-text">person</i></button>
-        <button class="btn btn-large deep-orange darken-1 waves-effect waves-light"><i class="material-icons white-text left">cloud</i>SoundCloud</button>
+        <div class="row">
+          <button class="btn blue-grey lighten-4 black-text col s3">Plain</button>
+          <button class="btn blue-grey lighten-4 disabled col s3">disabled</button>
+          <button class="btn blue-grey lighten-3 black-text waves-effect col s3">Wave Effect</button>
+          <button class="btn blue-grey lighten-2 black-text waves-effect waves-light col s3">Wave Effect Light</button>
+        </div>
+        <div class="container center"><button class="btn btn-large blue-grey black-text lighten-1 waves-effect waves-light">Wave Effect Light Large</button></div>
+        <br>
+        <div class="row">
 
+          <button class="btn btn-large blue-grey black-text waves-effect waves-light col s4"><i class="material-icons white-text">cloud</i></button>
+          <button class="btn btn-large blue-grey darken-3 black-text waves-effect waves-light col s4"><i class="material-icons white-text">person</i></button>
+          <button class="btn btn-large deep-orange darken-1 waves-effect waves-ligh col s4"><i class="material-icons white-text left">cloud</i>SoundCloud</button>
+        </div>
 
         <!-- Floating button -->
         <a href="#" class="btn-floating btn-large light-blue darken-3 black-text waves-effect waves-light"><i class="material-icons large">add</i></a>
+
+        <!-- Fixed action button -->
+        <div class="fixed-action-btn">
+          <a href="#" class="btn-floating btn-large light-blue darken-3"><i class="large material-icons">mode_edit</i></a>
+            <ul>
+              <li><a href="#" class="btn-floating green darken-3"><i class="large material-icons">format_quote</i></a></li>
+              <li><a href="#" class="btn-floating blue-grey darken-3"><i class="large material-icons">insert_chart</i></a></li>
+              <li><a href="#" class="btn-floating yellow darken-3"><i class="large material-icons">publish</i></a></li>
+              <li><a href="#" class="btn-floating blue darken-3"><i class="large material-icons">attach_file</i></a></li>
+            </ul>
+        </div>
+        <br><br><br>
       </div>
 
-      <!-- Compiled and minified JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+      var instances = M.FloatingActionButton.init(elems, {direction: 'up', hoverEnabled: false});
+    });
+
+    </script>
+    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     </body>
   </html>
