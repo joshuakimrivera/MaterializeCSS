@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
     <style>
         .rounded-card {
             border-radius: 30px !important;
@@ -34,26 +35,61 @@
     </nav>
     <br>
     <div class="row">
-        <div class="col s2">
+        <div class="col s4 m4 l2">
+            <div class="card hoverable light-blue darken-1 rounded-card">
+                <div class="card-content white-text">
+                    <span class="card-title">Dashboard</span>
+                    <hr style="color:grey;">
+                    <p><a href="#cpuChart" class="white-text">
+                            <h6>Hardware Monitoring</h6>
+                        </a></p>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="col s8 m8 l10">
             <div>
-                <div class="card hoverable light-blue darken-1 rounded-card">
+                <div class="card blue-grey hoverable darken-4 rounded-card">
                     <div class="card-content white-text">
-                        <span class="card-title">Dashboard</span>
-                        <hr style="color:grey;"><br>
-                        <span>Hello</span><br>
-                        <span>Hello</span><br>
-                        <span>Hello</span><br>
+                        <span class="card-title">Hardware Monitoring:</span>
+                        <div class="row">
+                            <div class="col s12 m12 l6 row">
+                                <h6>CPU Utilization</h6>
+                                <canvas id="cpuChart" class="col s12" height="100px"></canvas>
+                            </div>
+                            <div class="col s12 m12 l6 row">
+                                <h6>RAM Utilization</h6>
+                                <canvas id="ramChart" class="col s12" height="100px"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col s10">
-            <div>
+        <div class="col s8 m8 l10 row">
+            <div class="col s3">
                 <div class="card blue-grey hoverable darken-4 rounded-card">
                     <div class="card-content white-text">
-                        <span class="card-title">Stats Board 1</span>
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                        <span class="card-title">URL's Crawled</span>
+                        <div>
+                            <h3>45,000</h3>
+                            <h6>Since July 20, 2018</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s9">
+                <div class="card blue-grey hoverable darken-4 rounded-card">
+                    <div class="card-content white-text">
+                        <span class="card-title">URL Crawling Logs</span>
+                        <div>
+                            <p>Sitemap: https://www.cnn.com/sitemaps/cnn/index.xml <br>
+                                Sitemap: https://www.cnn.com/sitemaps/cnn/news.xml <br>
+                                Sitemap: https://www.cnn.com/sitemaps/sitemap-section.xml <br>
+                                Sitemap: https://www.cnn.com/sitemaps/sitemap-interactive.xml <br>
+                                Sitemap: https://www.cnn.com/ampstories/sitemap.xml <br>
+                                Sitemap: https://edition.cnn.com/sitemaps/news.xml</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,6 +98,36 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        //ramChart
+        var ramData = {
+            labels: ["0", "0.5", "2.0", "2.5", "3.0", "3.5"],
+            datasets: [{
+                fillColor: "rgba(79, 186, 111, 0.3)",
+                strokeColor: "#039be5",
+                pointColor: "#fff",
+                pointStrokeColor: "#9DB86D",
+                data: [30, 20, 50, 80, 100, 30]
+            }]
+        }
+        // get line chart canvas
+        var ramChart = document.getElementById('ramChart').getContext('2d');
+        new Chart(ramChart).Line(ramData);
+        //CPUChart
+        var cpuData = {
+            labels: ["0", "0.5", "2.0", "2.5", "3.0", "3.5"],
+            datasets: [{
+                fillColor: "rgba(79, 186, 111, 0.3)",
+                strokeColor: "#039be5",
+                pointColor: "#fff",
+                pointStrokeColor: "#9DB86D",
+                data: [30, 30, 29, 25, 26, 30]
+            }]
+        }
+        // get line chart canvas
+        var cpuChart = document.getElementById('cpuChart').getContext('2d');
+        new Chart(cpuChart).Line(cpuData);
+    </script>
 </body>
 
 </html>
